@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>my website / mywebsite.com</title>
+    <link rel="stylesheet" href="website.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo"><img src="logo.png" alt="mywebsite.com" /></div>
+      <div id="menu-toggle" class="menu-toggle">
+        <span></span> <span></span> <span></span>
+      </div>
+      <ul id="nav-menu">
+        <li class="item"><a href="#">microsoft365</a></li>
+        <li class="item"><a href="#">teams</a></li>
+        <li class="item"><a href="#">copilot</a></li>
+        <li class="item"><a href="#">surface</a></li>
+        <li class="item"><a href="#">xbox</a></li>
+        <li class="item"><a href="#">support</a></li>
+      </ul>
+      <div class="all-microsoft-dropdown">
+        <button id="all-microsoft-btn" class="all-microsoft-btn">
+          All Microsoft <span class="chevron">▼</span>
+        </button>
+        <div id="all-microsoft-menu" class="dropdown-menu">
+          <div class="dropdown-column">
+            <h3>Software</h3>
+            <a href="#">Windows Apps</a> <a href="#">AI</a>
+            <a href="#">OneDrive</a> <a href="#">Outlook</a>
+            <a href="#">OneNote</a> <a href="#">Microsoft Teams</a>
+          </div>
+          <div class="dropdown-column">
+            <h3>PCs & Devices</h3>
+            <a href="#">Shop Xbox</a> <a href="#">Accessories</a>
+          </div>
+          <div class="dropdown-column">
+            <h3>Entertainment</h3>
+            <a href="#">Xbox Game Pass Ultimate</a> <a href="#">Xbox games</a>
+            <a href="#">PC games</a>
+          </div>
+          <div class="dropdown-column">
+            <h3>Business</h3>
+            <a href="#">Microsoft Cloud</a> <a href="#">Microsoft Security</a>
+            <a href="#">Azure</a> <a href="#">Dynamics 365</a>
+            <a href="#">Microsoft 365 for business</a>
+          </div>
+          <div class="dropdown-column">
+            <h3>Developer & IT</h3>
+            <a href="#">Microsoft Developer</a> <a href="#">Microsoft Learn</a>
+            <a href="#">Visual Studio</a>
+          </div>
+          <div class="dropdown-column">
+            <h3>Other</h3>
+            <a href="#">Free downloads</a> <a href="#">Education</a>
+            <a href="#">Gift Cards</a> <a href="#">Licensing</a>
+          </div>
+        </div>
+      </div>
+      <div class="search-container">
+        <button id="search-toggle" class="search-icon-btn" aria-label="Search">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div id="search-box" class="search-box">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search Microsoft.com"
+          />
+          <button
+            id="search-submit"
+            class="search-submit-btn"
+            aria-label="Submit search"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="cart-container">
+        <button id="cart-toggle" class="icon-btn" aria-label="Shopping Cart">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17M9 19.5C9.8 19.5 10.5 20.2 10.5 21C10.5 21.8 9.8 22.5 9 22.5C8.2 22.5 7.5 21.8 7.5 21C7.5 20.2 8.2 19.5 9 19.5ZM20 19.5C20.8 19.5 21.5 20.2 21.5 21C21.5 21.8 20.8 22.5 20 22.5C19.2 22.5 18.5 21.8 18.5 21C18.5 20.2 19.2 19.5 20 19.5Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="user-profile-container">
+        <button
+          id="user-profile-toggle"
+          class="icon-btn"
+          aria-label="User Account"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="8"
+              r="4"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M6 21C6 17.7 8.7 15 12 15C15.3 15 18 17.7 18 21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <circle cx="19" cy="5" r="3" fill="currentColor" />
+            <path
+              d="M19 3V5M19 7V5M17 5H21"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="carousel-container">
+          <div class="carousel-slides">
+            <div class="carousel-slide active">
+              <img src="copilot.jpg" alt="Copilot+PC" />
+              <div class="carousel-slide-content">
+                <h2 class="carousel-title">Meet Surface Laptop</h2>
+                <p class="carousel-description">
+                  Unlock AI features like Live Captions and Cocreator with this
+                  exceptionally powerful laptop.
+                </p>
+                <button class="carousel-button">Learn more</button>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="ms.jpg" alt="Surface Pro" />
+            </div>
+          </div>
+          <!-- Navigation Arrows -->
+          <button
+            class="carousel-btn carousel-btn-prev"
+            aria-label="Previous slide"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="carousel-btn carousel-btn-next"
+            aria-label="Next slide"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <!-- Dots Indicator -->
+          <div class="carousel-dots">
+            <span class="carousel-dot" data-slide="1"></span>
+            <span class="carousel-dot" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+      <div class="quick-links-container">
+        <a href="#" class="quick-link-item">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="3" y="3" width="8" height="8" rx="1" fill="#000000" />
+            <rect x="13" y="3" width="8" height="8" rx="1" fill="#000000" />
+            <rect x="3" y="13" width="8" height="8" rx="1" fill="#000000" />
+            <rect x="13" y="13" width="8" height="8" rx="1" fill="#000000" />
+          </svg>
+          <span>Choose your Microsoft 365</span>
+        </a>
+        <a href="#" class="quick-link-item">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="image.png"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="none"
+              stroke="#000000"
+              stroke-width="1.5"
+            />
+            <path
+              d="M8 8L16 16M16 8L8 16"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Shop Xbox</span>
+        </a>
+        <a href="#" class="quick-link-item">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="3" y="3" width="8" height="8" rx="1" fill="#000000" />
+            <rect x="13" y="3" width="8" height="8" rx="1" fill="#000000" />
+            <rect x="3" y="13" width="8" height="8" rx="1" fill="#000000" />
+            <rect x="13" y="13" width="8" height="8" rx="1" fill="#000000" />
+          </svg>
+          <span>Get Windows 11</span>
+        </a>
+        <a href="#" class="quick-link-item">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="4"
+              y="4"
+              width="16"
+              height="12"
+              rx="1"
+              fill="none"
+              stroke="#000000"
+              stroke-width="1.5"
+            />
+            <rect x="6" y="16" width="12" height="2" rx="0.5" fill="#000000" />
+          </svg>
+          <span>Explore Surface devices</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Product Cards Section -->
+    <section class="promo-cards-section">
+      <div class="promo-cards-container">
+        <div class="promo-card">
+          <img src="ms edge.avif" alt="Surface Pro, Copilot+ PC" />
+          <h3 class="promo-card-title">Surface Pro, Copilot+ PC</h3>
+          <p class="promo-card-description">
+            This laptop's unrivalled flexibility and AI features like Cocreator,
+            enable you to do more than you ever imagined.
+          </p>
+          <button class="promo-card-button">Learn more</button>
+        </div>
+        <div class="promo-card">
+          <img src="-SurfacePro.avif" alt="Microsoft Edge" />
+          <h3 class="promo-card-title">Microsoft Edge</h3>
+          <p class="promo-card-description">
+            World-class performance with more privacy, more productivity and
+            more value while you browse.
+          </p>
+          <button class="promo-card-button">Download now</button>
+        </div>
+        <div class="promo-card">
+          <img src="Xbox-Game.avif" alt="Xbox Game Pass Ultimate" />
+          <h3 class="promo-card-title">Xbox Game Pass Ultimate</h3>
+          <p class="promo-card-description">
+            Play new titles on day one. Enjoy hundreds of high-quality games
+            with friends on console, PC or cloud.
+          </p>
+          <button class="promo-card-button">Join now</button>
+        </div>
+        <div class="promo-card">
+          <img src="Xbox-Series.avif" alt="Xbox Series X" />
+          <h3 class="promo-card-title">Xbox Series X</h3>
+          <p class="promo-card-description">
+            The fastest, most powerful Xbox ever.
+          </p>
+          <button class="promo-card-button">Shop Xbox Series X</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" id="back-to-top" aria-label="Back to top">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 19V5M12 5L5 12M12 5L19 12"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span>Back to top</span>
+    </button>
+
+    <script src="website.js"></script>
+  </body>
+</html>
