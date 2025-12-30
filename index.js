@@ -208,9 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function startCarousel() {
-    carouselInterval = setInterval(nextSlide,2000git); // Auto-advance every 0.6 seconds
+    carouselInterval = setInterval(nextSlide,3000); // Auto-advance every 0.6 seconds
   }
-
   function stopCarousel() {
     clearInterval(carouselInterval);
   }
