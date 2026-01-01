@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", "Segoe UI", system-ui, "Helvetica Neue";
+;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
-  padding: 12px 40px;
+  padding: 6px 40px;
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
   top: 0;
@@ -31,7 +32,7 @@ body {
 }
 
 #logo img {
-  height: 32px;
+  height: 25px;
 }
 
 /* Menu */
@@ -102,22 +103,27 @@ body {
   display: none;
   position: absolute;
   top: 60px;
-  right: 0px;
-  background: #fff;
+  right: 50px;
+  background: #fdffff;
   padding: 20px;
-  width: 80%;
+  width: 80px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.all-microsoft-dropdown:hover .dropdown-menu {
+.all-microsoft-dropdown.active .dropdown-menu {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  gap: 100px;
+  width: 90%;
+  height: 500px;
 }
 
 .dropdown-column h3 {
   font-size: 14px;
   margin-bottom: 10px;
+  /* margin-right: 12px; */
+  margin: 22px;
+  margin-top: 10px;
 }
 
 .dropdown-column a {
@@ -125,11 +131,12 @@ body {
   font-size: 13px;
   color: #333;
   text-decoration: none;
-  margin-bottom: 6px;
+  margin: 24px;
 }
 
 .dropdown-column a:hover {
   text-decoration: underline;
+  color: #005a9e;
 }
 
 /* ================= SEARCH ================= */
@@ -150,7 +157,7 @@ body {
 
 .search-icon-btn:hover {
   background-color: #f5f5f5;
-}
+}.
 
 /* ================= CART & USER PROFILE ================= */
 .cart-container,
@@ -288,18 +295,19 @@ body {
 }
 
 .carousel-title {
-  font-size: 42px;
-  font-weight: 60;
-  /* margin-bottom: 16px; */
+  font-size: 30px;
+  font-weight: 20px;
   line-height: 1.2;
   color: #111;
-}
+  margin-bottom: 10px;
+} 
 
 .carousel-description {
   font-size: 16px;
   line-height: 1.5;
   margin-top: 0px;
   color: #333;
+  margin-top: 20px;
 }
 
 .carousel-button {
@@ -312,6 +320,7 @@ body {
   cursor: pointer;
   border-radius: 2px;
   transition: background 0.2s;
+  margin-top: 35px;
 }
 
 .carousel-button:hover {
@@ -320,61 +329,66 @@ body {
 
 /* Carousel Navigation Buttons */
 .carousel-btn {
-  position: absolute;
+  position:absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   cursor: pointer;
-  z-index: 10;
-  color: #111;
-  transition: background 0.3s, opacity 0.3s;
-  opacity: 0.7;
+  z-index: 20;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .carousel-btn:hover {
   background: rgba(255, 255, 255, 1);
-  opacity: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-btn-prev {
-  left: 20px;
+  left: 24px;
 }
 
 .carousel-btn-next {
-  right: 20px;
+  right: 24px;
+}
+
+/* Arrow icon */
+.carousel-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: #111;
 }
 
 /* Carousel Dots */
 .carousel-dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
-  z-index: 10;
+  gap: 12px;
+  z-index: 20;
 }
 
 .carousel-dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(29, 17, 17, 0.664);
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .carousel-dot.active {
-  background: rgba(255, 255, 255, 1);
-  transform: scale(1.2);
+  background: #fff;
+  transform: scale(1.4);
 }
 
 .carousel-dot:hover {
@@ -479,10 +493,10 @@ body {
 
 /* ================= BACK TO TOP ================= */
 .back-to-top-btn {
-  position: sticky;
-  bottom: 0px;
-  right: 0px;
-  background: #737373;
+  position: relative;
+  bottom: 16px;
+  right: 20px;
+  background: #a509d4;
   color: #fff;
   border: none;
   padding: 10px 14px;
@@ -494,6 +508,7 @@ body {
   border-radius: 4px;
   transition: background 0.2s;
   z-index: 999;
+  float: right;
 }
 
 .back-to-top-btn:hover {
@@ -505,7 +520,7 @@ body {
 }
 .back-to-top-btn {
   display: flex !important;
-  background: red;
+  background: transparent;
 }
 /* ================= PRODUCT HERO ================= */
 .product-hero {
@@ -736,3 +751,44 @@ body {
     padding: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  .carousel-slide-content {
+    position: static; /* 🔥 KEY CHANGE */
+    transform: none;
+    background: #fff;
+    color: #000;
+    max-width: 100%;
+    padding: 16px;
+    margin: 0;
+  }
+
+  .carousel-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .carousel-description {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 12px;
+  }
+
+  .carousel-button {
+    width: fit-content;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+} */

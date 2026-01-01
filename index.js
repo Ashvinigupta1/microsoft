@@ -30,6 +30,22 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
+  
+  const dropdown = document.querySelector(".all-microsoft-dropdown");
+  const button = document.querySelector(".all-microsoft-btn");
+
+  button.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevents closing immediately
+    dropdown.classList.toggle("active");
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", () => {
+    dropdown.classList.remove("active");
+  });
+
+
+
     // Close menu when clicking on a link and add active state
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
@@ -71,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
   // All Microsoft dropdown toggle
   if (allMicrosoftBtn && allMicrosoftMenu) {
     allMicrosoftBtn.addEventListener('click', function(event) {
@@ -208,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function startCarousel() {
-    carouselInterval = setInterval(nextSlide,3000); // Auto-advance every 0.6 seconds
+    carouselInterval = setInterval(nextSlide,5000); // Auto-advance every 0.6 seconds
   }
   function stopCarousel() {
     clearInterval(carouselInterval);
@@ -253,4 +268,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
-
